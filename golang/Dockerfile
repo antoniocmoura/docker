@@ -8,7 +8,6 @@ COPY codeeducation.go .
 
 RUN go build codeeducation.go
 
-
 FROM scratch
 
 WORKDIR /usr/src/app
