@@ -1,1 +1,2 @@
-run docker-compose up and open http://localhost:8080
+run docker-compose up -d 
+open http://localhost:8080
