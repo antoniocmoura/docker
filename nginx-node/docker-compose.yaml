@@ -20,7 +20,7 @@ services:
   db:
     image: mysql:5.7
     command: --innodb-use-native-aio=0
-    container_name: db
+    container_name: db    
     restart: always
     tty: true    
     volumes: 
@@ -43,6 +43,8 @@ services:
       - node-network
     ports: 
       - "8080:80" 
+    depends_on: 
+       - app
 
 networks: 
   node-network:
