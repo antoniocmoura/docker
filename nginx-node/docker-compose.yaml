@@ -7,6 +7,8 @@ services:
       context: ./node
     image: antoniocmoura/node-app  
     container_name: app
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 30s docker-entrypoint.sh
+    command: sh -c "node app.js"
     networks: 
       - node-network
     tty: true
